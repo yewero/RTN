@@ -257,8 +257,8 @@ setMethod(
     } else {
       res<-tni.perm.separate(object,verbose)
     }
-    # object@results$mipval <- res$mipval
-    # object@results$miadjpv <- res$miadjpv
+    object@results$mipval <- res$mipval
+    object@results$miadjpv <- res$miadjpv
     object@results$tn.ref <- res$tn.ref * tni.cor(object@gexp, res$tn.ref, estimator=object@para$perm$estimator)
     object@status["Permutation"] <- "[x]"
     if(verbose)cat("-Permutation analysis complete! \n\n")
