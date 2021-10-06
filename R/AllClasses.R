@@ -1,0 +1,91 @@
+##Class TNI (Transcriptional Network Inference)
+setClass(
+  "TNI",
+  representation(
+    gexp="matrix",
+    regulatoryElements="character",
+    modulators="char_Or_null",
+    rowAnnotation="data.frame",
+    colAnnotation="data.frame",
+    para="list",
+    results="list",
+    summary="list",
+    status="character"
+  ),
+  prototype=list(
+    gexp=matrix(),
+    regulatoryElements=character(),
+    modulators=character(),
+    rowAnnotation=data.frame(),
+    colAnnotation=data.frame(),
+    para=list(),
+    results=list(),
+    summary=list(),
+    status=character()
+  )
+)
+
+##Class TNA (Transcriptional Network Analysis)
+setClass(
+  "TNA",
+  representation(
+    referenceNetwork="matrix",
+    transcriptionalNetwork="matrix",
+    regulatoryElements="character",
+    phenotype="num_Or_int_Or_null", 
+    hits="char_Or_null",
+    gexp="matrix",
+    rowAnnotation="data.frame",
+    colAnnotation="data.frame",
+    listOfReferenceRegulons="list",
+    listOfRegulons="list",
+    listOfModulators="list",
+    para="list",
+    results="list",
+    summary="list",
+    status="list"
+  ),
+  prototype=list(
+    referenceNetwork=matrix(),
+    transcriptionalNetwork=matrix(),
+    regulatoryElements=character(),
+    phenotype=numeric(),
+    hits=character(),
+    gexp=matrix(),
+    rowAnnotation=data.frame(),
+    colAnnotation=data.frame(),
+    listOfReferenceRegulons=list(),
+    listOfRegulons=list(),
+    listOfModulators=list(),
+    para=list(),
+    results=list(),
+    summary=list(),
+    status=list()
+  )
+)
+
+##Class AVS (Associated Variant Set)
+setClass(
+  "AVS",
+  representation(
+    markers="character",
+    validatedMarkers="data.frame",
+    variantSet="list",
+    randomSet="list",
+    para="list",
+    results="list",
+    summary="list",
+    status="character"
+  ),
+  prototype=list(
+    markers=character(),
+    validatedMarkers=data.frame(),
+    variantSet=list(),
+    randomSet=list(),
+    para=list(),
+    results=list(),
+    summary=list(),
+    status=character()
+  )
+)
+
